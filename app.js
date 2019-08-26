@@ -18,6 +18,7 @@ mongoose.connect('mongodb://favourtheo:1A2b3c--@ds353457.mlab.com:53457/books_re
 const genres_route = require('./routes/genres')
 const home_route = require('./routes/index')
 const customer_route = require('./routes/customers')
+const author_route = require('./routes/authors')
 
 
 // parse application/x-www-form-urlencoded
@@ -31,6 +32,7 @@ app.use(bodyParser.json())
 app.use('/api/genres', genres_route)
 app.use('/api', home_route)
 app.use('/api/customers', customer_route)
+app.use('/api/authors', author_route)
 
 
 //=====================================
